@@ -1,0 +1,149 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: #f1f8fe;
+  padding: 20px 0;
+
+}
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 200px;
+}
+.nav__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.nav__btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+
+.nav__logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+}
+.nav__logout:hover{
+  opacity: 0.5;
+}
+
+/* フッター */
+
+.footer {
+  background-color: #999;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
+
+/* 背景 */
+
+ .first-view {
+  position: relative;
+}
+
+
+.home-img {
+  background-image: url(home.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+
+}
+
+.contents {
+  position: absolute;
+  top: calc(50% - 35px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  margin-left: 60px;
+}
+
+.main-message {
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color:beige;
+}
+
+.sub-message {
+  font-size: 18px;
+  color: beige;
+}
+
+.link-btn {
+  height: 100px;
+  width: 250px;
+  background-color:beige;
+  border-radius: 10px;
+  margin-right: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-content {
+  font-size: 24px;
+  font-weight: 600;
+}

@@ -1,0 +1,2 @@
+module Guides::ApplicationHelper
+end

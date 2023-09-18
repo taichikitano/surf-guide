@@ -9,10 +9,10 @@ class DeviseCreateGuides < ActiveRecord::Migration[7.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.integer  :sex_id,           null: false
-      t.integer   :age_id,           null: false
+      t.string   :age,           null: false
       t.integer :history_id,     null: false
       t.integer :style_id, null: false
-      t.string :home,            null: false
+      t.string :home_point,            null: false
     
 
       ## Recoverable

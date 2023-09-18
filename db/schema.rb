@@ -17,10 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_17_154049) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "sex_id", null: false
-    t.integer "age_id", null: false
+    t.string "age", null: false
     t.integer "history_id", null: false
     t.integer "style_id", null: false
-    t.string "home", null: false
+    t.string "home_point", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -36,7 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_17_154049) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "sex_id", null: false
-    t.integer "age_id", null: false
+    t.string "age", null: false
     t.integer "level_id", null: false
     t.integer "history_id", null: false
     t.integer "style_id", null: false
