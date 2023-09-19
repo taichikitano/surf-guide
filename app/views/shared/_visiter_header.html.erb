@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="inner">
+    <div class="nav">
+      <div class="nav__left">
+        <%= link_to "SURF GUIDE", root_path , class: :logo %>
+      </div>
+      <% if visiter_signed_in? %>
+        <div class="nav__right">
+          <%= link_to "ログアウト", destroy_visiter_session_path, data: { turbo_method: :delete }, class: :nav__logout %>
+          <%= link_to "ガイドを探す", root_path, class: :nav__btn %>
+        </div>
+      <% else %>
+        <div class="nav__right">
+          <%= link_to "ログイン", new_visiter_session_path, class: :nav__btn %>
+          <%= link_to "新規登録", new_visiter_registration_path, class: :nav__btn %>
+          <%= link_to "ガイド用ページはこちら", guide_home_guidances_path, class: :nav__btn %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</header>
