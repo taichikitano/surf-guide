@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root to: "home#index"
-  resources :guide_home, only: :index
+  root to: "guidances#home"
+  resources :guidances do
+    collection do
+      get 'guide_home'
+    end
+  end
 
 end
