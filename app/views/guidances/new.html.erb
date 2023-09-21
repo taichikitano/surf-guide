@@ -1,0 +1,15 @@
+<%= render "shared/guide_header" %>
+
+<%= form_with model: @guidance, url: guidances_path do |f|%>
+  <div>
+    カテゴリーの選択
+    <div id="select-wrap">
+      <%= f.collection_select :ancestry, @mainsurf_points, :id, :name, {include_blank: "---"}, {id: "parent-category" } %>
+    </div>
+  </div>
+<% end %>
+
+<%= render "shared/footer" %>
+
+
+
