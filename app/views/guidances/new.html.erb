@@ -2,10 +2,25 @@
 
 <%= form_with model: @guidance, url: guidances_path do |f|%>
   <div>
-    カテゴリーの選択
+    サーフポイントの選択
     <div id="select-wrap">
-      <%= f.collection_select :ancestry, @mainsurf_points, :id, :name, {include_blank: "---"}, {id: "parent-category" } %>
+      <%= f.collection_select :surf_point_id, @mainsurf_points, :id, :name, {include_blank: "---"}, {id: "parent-category" } %>
     </div>
+  </div>
+  <div class="field">
+    <%= f.label :style_id, "サーフスタイル" %><br />
+    <%= f.collection_select(:style_id, Style.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :price, "ガイド料金/１時間" %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :amount, "ガイド時間 ※１時間単位" %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit "ガイドを開始", class: :form__btn  %>
   </div>
 <% end %>
 

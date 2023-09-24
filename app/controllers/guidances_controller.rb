@@ -17,4 +17,19 @@ class GuidancesController < ApplicationController
     render json:{ item: children_item }
   end
 
+  def create
+    @guidance = Guidance.new(guidance_params)
+    if @guidance.save
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+  
+  private
+
+  def guidance_params
+    params.require(:guidance).permit(:style_id, :price, :amount, :surf_point_id).merge(guide_id: current_guide.id)
+  end
+
 end

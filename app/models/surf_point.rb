@@ -1,4 +1,4 @@
 class SurfPoint < ApplicationRecord
-  has_many :posts
+  has_many :guidances
   has_ancestry
 end
