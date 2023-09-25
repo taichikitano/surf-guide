@@ -1,8 +1,8 @@
 class CreateGuidances < ActiveRecord::Migration[7.0]
   def change
     create_table :guidances do |t|
-      t.bigint :guide_id, limit: 20
-      t.bigint :surf_point_id, limit: 20
+      t.bigint :guide_id
+      t.bigint :surf_point_id
       t.integer :style_id
       t.integer :price
       t.integer :amount
