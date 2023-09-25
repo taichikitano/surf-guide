@@ -53,3 +53,5 @@ production:
   database: surf_guide_production
   username: surf_guide
   password: <%= ENV["SURF_GUIDE_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
