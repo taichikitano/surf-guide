@@ -7,7 +7,7 @@
       <% if guide_signed_in? %>
         <div class="nav__right">
             <%= link_to "ログアウト", destroy_guide_session_path, data: { turbo_method: :delete }, class: :nav__logout %>
-            <%= link_to "ガイド開始", 'hoge', class: :nav__btn %>
+            <%= link_to "ガイド開始", new_guidance_path, class: :nav__btn %>
         </div>
       <% else %>
         <div class="nav__right">

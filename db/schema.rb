@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_17_154049) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_19_053436) do
+  create_table "guidances", charset: "utf8", force: :cascade do |t|
+    t.bigint "guide_id"
+    t.bigint "surf_point_id"
+    t.integer "style_id"
+    t.integer "price"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guide_id"], name: "index_guidances_on_guide_id"
+    t.index ["surf_point_id"], name: "index_guidances_on_surf_point_id"
+  end
+
   create_table "guides", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "name_kana", null: false
@@ -28,6 +40,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_17_154049) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_guides_on_email", unique: true
     t.index ["reset_password_token"], name: "index_guides_on_reset_password_token", unique: true
+  end
+
+  create_table "surf_points", charset: "utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "ancestry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "visiters", charset: "utf8", force: :cascade do |t|
@@ -49,4 +68,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_17_154049) do
     t.index ["reset_password_token"], name: "index_visiters_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "guidances", "guides"
+  add_foreign_key "guidances", "surf_points"
 end
