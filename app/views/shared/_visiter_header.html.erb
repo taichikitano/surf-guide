@@ -7,7 +7,7 @@
       <% if visiter_signed_in? %>
         <div class="nav__right">
           <%= link_to "ログアウト", destroy_visiter_session_path, data: { turbo_method: :delete }, class: :nav__logout %>
-          <%= link_to "ガイドを探す", root_path, class: :nav__btn %>
+          <%= link_to "ガイドを探す", guidances_path, class: :nav__btn %>
         </div>
       <% else %>
         <div class="nav__right">
