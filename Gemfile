@@ -71,12 +71,12 @@ group :test do
   gem "webdrivers"
 end
 
-group :production do
-  gem 'pg'
-end
-
 gem 'devise'
 gem 'active_hash'
 gem 'ancestry'
 gem 'pry-rails'
 gem 'jquery-rails'
+
+group :production do
+  gem 'pg'
+end

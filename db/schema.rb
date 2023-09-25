@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_19_053436) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_25_151604) do
   create_table "guidances", charset: "utf8", force: :cascade do |t|
     t.bigint "guide_id"
     t.bigint "surf_point_id"
@@ -19,8 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_053436) do
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["guide_id"], name: "index_guidances_on_guide_id"
-    t.index ["surf_point_id"], name: "index_guidances_on_surf_point_id"
+    t.index ["guide_id"], name: "fk_rails_070b0e2e12"
+    t.index ["surf_point_id"], name: "fk_rails_f0600d4b29"
   end
 
   create_table "guides", charset: "utf8", force: :cascade do |t|
