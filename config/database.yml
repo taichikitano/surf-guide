@@ -8,7 +8,7 @@ development:
   username: root
   password:
   host: localhost
-  database: surf_guide_development
+  database: surf-guide_development
 
 test:
   <<: *default
@@ -16,7 +16,7 @@ test:
   username: root
   password:
   host: localhost
-  database: surf_guide_test
+  database: surf-guide_test
 
 production:
   <<: *default
