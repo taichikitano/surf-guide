@@ -25,12 +25,12 @@ class Guides::SessionsController < Devise::SessionsController
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
 
-  def after_sign_in_path_for(resource)
-    guidances_path(resource)
-  end
+  #def after_sign_in_path_for(resource)
+   # new_guidance_path(resource)
+  #end
 
   def after_sign_out_path_for(resource)
-    guidances_path(resource)
+    root_path(resource)
   end
 
 end

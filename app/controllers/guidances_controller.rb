@@ -3,12 +3,10 @@ class GuidancesController < ApplicationController
   def home
   end
 
-  def guide_home
-  end
-
   def new
-   @guidance = Guidance.new
-   @mainsurf_points = SurfPoint.all.order("id ASC").limit(3)
+    authenticate_guide!
+    @guidance = Guidance.new
+    @mainsurf_points = SurfPoint.all.order("id ASC").limit(3)
   end
 
   def search
