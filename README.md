@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
+  SURF GUIDE
 
-Things you may want to cover:
+# アプリケーション概要
+  サーフィンのガイドの検索や予約、または、一般の方がサーフガイドとして登録できるアプリ。
+# URL
 
-* Ruby version
+# テスト用アカウント
 
-* System dependencies
+# 利用方法
+## サーフガイドの検索・予約
 
-* Configuration
+## サーフガイドの登録
 
-* Database creation
+# アプリケーションを作成した背景
 
-* Database initialization
+# 洗い出した要件
 
-* How to run the test suite
+# 実装した機能についての画像やGIFおよびその説明
 
-* Services (job queues, cache servers, search engines, etc.)
+# 実装予定の機能
 
-* Deployment instructions
+# データベース設計
 
-* ...
+# 画面遷移図
+
+# 開発環境
+
+# ローカルでの動作方法
+
+# 工夫したポイント
