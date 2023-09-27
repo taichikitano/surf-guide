@@ -18,6 +18,7 @@
   <テスト用ユーザー(ガイド)>  
   メールアドレス：test@testtest  
   パスワード：111111
+
 # 利用方法
 ## ＜サーフガイドの検索・予約＞
   1.トップページのヘッダーから新規登録を行う。  
@@ -36,13 +37,12 @@
   この問題は双方のコミュニケーション不足と、ビジターが増えてもローカルへのメリットが無い点が原因だと仮定しました。  
   そこで、少しでもこの問題を解決する為に、ローカルがサーフガイドとして登録でき、  
   ローカルとビジターが簡単に繋がることが出来るガイド予約アプリを開発することにしました。  
-  
-# 洗い出した要件
 
 # 実装予定の機能
   ・予約機能(日時選択)  
   ・ガイド検索機能、一覧表示機能  
   ・クレジットカード決済機能  
+
 # データベース設計
   [![Image from Gyazo](https://i.gyazo.com/92eb81a7a5275b02c638f262c6d90607.png)](https://gyazo.com/92eb81a7a5275b02c638f262c6d90607)
 
@@ -50,7 +50,11 @@
   [![Image from Gyazo](https://i.gyazo.com/0f1253e389093ada3354c1a63cde8812.png)](https://gyazo.com/0f1253e389093ada3354c1a63cde8812)
 
 # 開発環境
+  HTML/CSS/JavaScript/Ruby/Ruby on Rails/MySQL/PostgreSQL/Github/Visual Studio Code
 
 # ローカルでの動作方法
-
-# 工夫したポイント
+  以下のコマンドを順に実行。  
+  % git clone https://github.com/taichikitano/surf-guide.git  
+  % cd surf-guide  
+  % bundle install  
+  % yarn install  
