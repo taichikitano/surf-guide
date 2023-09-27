@@ -24,6 +24,7 @@
 # 実装予定の機能
 
 # データベース設計
+  [![Image from Gyazo](https://i.gyazo.com/92eb81a7a5275b02c638f262c6d90607.png)](https://gyazo.com/92eb81a7a5275b02c638f262c6d90607)
 
 # 画面遷移図
 
