@@ -14,6 +14,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: "guidances#home"
-  resources :guidances
-  get '/surf_point/:id', to: 'guidances#search'
+  resources :guidances do
+    collection do
+      get '/surf_point/:id', to: 'guidances#search'
+    end
+  end
 end

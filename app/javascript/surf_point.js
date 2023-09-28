@@ -14,7 +14,7 @@ window.addEventListener('turbo:load', function () {
   // Ajax通信
   const XHR = new XMLHttpRequest();
   const categoryXHR = (id) => {
-    XHR.open("GET", `/surf_point/${id}`, true);
+    XHR.open("GET", `/guidances/surf_point/${id}`, true);
     XHR.responseType = "json";
     XHR.send();
   }
