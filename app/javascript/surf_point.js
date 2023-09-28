@@ -46,6 +46,12 @@ window.addEventListener('turbo:load', function () {
 
     childWrap.setAttribute('id', 'child-select-wrap')
     childSelect.setAttribute('id', 'child-select')
+
+    // 子の初期値を設定
+    const childDefaultOption = document.createElement('option');
+    childDefaultOption.innerHTML = '---'; // 初期値のラベルを設定
+    childDefaultOption.setAttribute('value', ''); // 初期値の値を設定
+    childSelect.appendChild(childDefaultOption);
     
     // forEach文でitem（子の値）を繰り返す
     items.forEach(item => {
@@ -79,6 +85,12 @@ window.addEventListener('turbo:load', function () {
 
     grandchildWrap.setAttribute('id', 'grand-child-select-wrap')
     grandchildSelect.setAttribute('id', 'grand-child-select')
+
+    // 孫の初期値を設定
+    const grandchildDefaultOption = document.createElement('option');
+    grandchildDefaultOption.innerHTML = '---'; // 初期値のラベルを設定
+    grandchildDefaultOption.setAttribute('value', ''); // 初期値の値を設定
+    grandchildSelect.appendChild(grandchildDefaultOption);
     
     // forEach文でitem（孫の値）を繰り返す
     items.forEach(item => {
