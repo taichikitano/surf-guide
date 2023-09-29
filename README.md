@@ -58,4 +58,3 @@
   % git clone https://github.com/taichikitano/surf-guide.git  
   % cd surf-guide  
   % bundle install  
-  % yarn install  
