@@ -76,6 +76,7 @@ gem 'active_hash'
 gem 'ancestry'
 gem 'pry-rails'
 gem 'jquery-rails'
+gem 'ransack'
 
 group :production do
   gem 'pg'

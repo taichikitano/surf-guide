@@ -10,10 +10,8 @@ Rails.application.routes.draw do
     passwords:     'guides/passwords',
     registrations: 'guides/registrations'
   }
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  root to: "guidances#home"
+  root to: 'guidances#home'
   resources :guidances do
     collection do
       get '/surf_point/:id', to: 'guidances#search'

@@ -3,6 +3,12 @@ class GuidancesController < ApplicationController
   def home
   end
 
+  def index
+    @q = Guidance.ransack(params[:q])
+    @guidances = @q.result
+    @mainsurf_points = SurfPoint.all.order("id ASC").limit(3)
+  end
+
   def new
     authenticate_guide!
     @guidance = Guidance.new
