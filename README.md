@@ -51,7 +51,7 @@
   [![Image from Gyazo](https://i.gyazo.com/0f1253e389093ada3354c1a63cde8812.png)](https://gyazo.com/0f1253e389093ada3354c1a63cde8812)
 
 # 開発環境
-  HTML/CSS/JavaScript/Ruby/Ruby on Rails/MySQL/PostgreSQL/Github/Visual Studio Code
+  HTML/CSS/JavaScript/Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code
 
 # ローカルでの動作方法
   以下のコマンドを順に実行。  
