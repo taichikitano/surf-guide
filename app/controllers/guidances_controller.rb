@@ -23,6 +23,7 @@ class GuidancesController < ApplicationController
 
   def create
     @guidance = Guidance.new(guidance_params)
+    @mainsurf_points = SurfPoint.all.order("id ASC")
     if @guidance.save
       redirect_to root_path
     else
