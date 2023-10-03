@@ -19,6 +19,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_25_151604) do
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "child_surf_point_id"
+    t.bigint "grandchild_surf_point_id"
+    t.index ["child_surf_point_id"], name: "index_guidances_on_child_surf_point_id"
+    t.index ["grandchild_surf_point_id"], name: "index_guidances_on_grandchild_surf_point_id"
     t.index ["guide_id"], name: "fk_rails_070b0e2e12"
     t.index ["surf_point_id"], name: "fk_rails_f0600d4b29"
   end
@@ -70,4 +74,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_25_151604) do
 
   add_foreign_key "guidances", "guides"
   add_foreign_key "guidances", "surf_points"
+  add_foreign_key "guidances", "surf_points", column: "child_surf_point_id"
+  add_foreign_key "guidances", "surf_points", column: "grandchild_surf_point_id"
 end
