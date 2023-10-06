@@ -46,6 +46,8 @@ window.addEventListener('turbo:load', function () {
 
     childWrap.setAttribute('id', 'child-select-wrap')
     childSelect.setAttribute('id', 'child-select')
+    // 子の"child_id"をparamsとして、サーバー側に送る
+    childSelect.setAttribute('name', 'child_id');
 
     // 子の初期値を設定
     const childDefaultOption = document.createElement('option');
@@ -85,6 +87,8 @@ window.addEventListener('turbo:load', function () {
 
     grandchildWrap.setAttribute('id', 'grand-child-select-wrap')
     grandchildSelect.setAttribute('id', 'grand-child-select')
+    // 孫の"grandchild_id"をparamsとして、サーバー側に送る
+    grandchildSelect.setAttribute('name', 'grandchild_id')
 
     // 孫の初期値を設定
     const grandchildDefaultOption = document.createElement('option');
