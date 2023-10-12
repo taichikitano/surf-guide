@@ -3,7 +3,7 @@
 <div class='search-guides'>
   <%= search_form_for @q, url: guidances_path do |f| %>
     <div id="select-wrap">
-      <%= f.collection_select(:surf_point_id_eq, @mainsurf_points, :id, :name, {include_blank: "---"}, {id: "parent-category" }) %>
+      <%= f.collection_select(:surf_point_id_in, @mainsurf_points, :id, :name, {include_blank: "---"}, {id: "parent-category" }) %>
     </div>
     <%= f.submit '検索' %>
   <% end %>
