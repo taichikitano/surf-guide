@@ -4,15 +4,20 @@ class GuidancesController < ApplicationController
   end
 
   def index
-    @q = Guidance.ransack(params[:q])
     @mainsurf_points = SurfPoint.roots.order("id ASC")
-    
-    if params[:q].present? && params[:q][:surf_point_id_in].present?
-      selected_surf_point = SurfPoint.find(params[:q][:surf_point_id_in])
+  
+    if params[:grandchild_id].present?
+      @guidances = Guidance.where(surf_point_id: params[:grandchild_id])
+    elsif params[:child_id].present?
+      selected_surf_point = SurfPoint.find(params[:child_id])
       related_surf_point_ids = selected_surf_point.subtree_ids
-      @guidances = @q.result.where(surf_point_id: related_surf_point_ids)
+      @guidances = Guidance.where(surf_point_id: related_surf_point_ids)
+    elsif params[:surf_point_id].present?
+      selected_surf_point = SurfPoint.find(params[:surf_point_id])
+      related_surf_point_ids = selected_surf_point.subtree_ids
+      @guidances = Guidance.where(surf_point_id: related_surf_point_ids)
     else
-      @guidances = @q.result
+      @guidances = Guidance.all
     end
   end
 
