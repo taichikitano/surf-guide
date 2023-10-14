@@ -1,11 +1,11 @@
 <%= render "shared/visiter_header" %>
 
 <div class='search-guides'>
-  <%= search_form_for @q, url: guidances_path do |f| %>
+  <%= form_tag guidances_path, method: :get do %>
     <div id="select-wrap">
-      <%= f.collection_select(:surf_point_id_in, @mainsurf_points, :id, :name, {include_blank: "---"}, {id: "parent-category" }) %>
+      <%= select_tag :surf_point_id, options_from_collection_for_select(@mainsurf_points, "id", "name", params[:surf_point_id]), include_blank: "---", id: "parent-category" %>
     </div>
-    <%= f.submit '検索' %>
+    <%= submit_tag '検索' %>
   <% end %>
 </div>
 
