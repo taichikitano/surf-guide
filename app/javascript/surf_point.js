@@ -115,4 +115,22 @@ window.addEventListener('turbo:load', function () {
     getChildCategoryData()
   })
 
-})
+  // 検索後にセレクトボックスを初期値に戻す
+  const searchButton = document.querySelector('[type="submit"]');
+
+  searchButton.addEventListener('click', function() {
+    setTimeout(() => { // setTimeoutを使って遅延させる
+      // 親カテゴリのセレクトボックスを初期状態に戻す
+      const parentCategory = document.getElementById('parent-category');
+      parentCategory.value = '';
+
+      // 子、孫カテゴリのセレクトボックスが存在する場合は削除する
+      const childSelectWrap = document.getElementById('child-select-wrap');
+      if (childSelectWrap) childSelectWrap.remove();
+
+      const grandChildSelectWrap = document.getElementById('grand-child-select-wrap');
+      if (grandChildSelectWrap) grandChildSelectWrap.remove();
+    }, 100); // 100ミリ秒後に実行する
+  });
+
+});
