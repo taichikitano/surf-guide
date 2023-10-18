@@ -5,20 +5,8 @@ class GuidancesController < ApplicationController
 
   def index
     @mainsurf_points = SurfPoint.roots.order("id ASC")
-  
-    if params[:grandchild_id].present?
-      @guidances = Guidance.where(surf_point_id: params[:grandchild_id])
-    elsif params[:child_id].present?
-      selected_surf_point = SurfPoint.find(params[:child_id])
-      related_surf_point_ids = selected_surf_point.subtree_ids
-      @guidances = Guidance.where(surf_point_id: related_surf_point_ids)
-    elsif params[:surf_point_id].present?
-      selected_surf_point = SurfPoint.find(params[:surf_point_id])
-      related_surf_point_ids = selected_surf_point.subtree_ids
-      @guidances = Guidance.where(surf_point_id: related_surf_point_ids)
-    else
-      @guidances = Guidance.all
-    end
+    @q = Guidance.ransack(params[:q])
+    @guidance = @q.result
   end
 
   def new
@@ -45,7 +33,7 @@ class GuidancesController < ApplicationController
   private
 
   def guidance_params
-    params.require(:guidance).permit(:style_id, :price, :amount, :surf_point_id, :child_id, :grandchild_id).merge(guide_id: current_guide.id)
+    params.require(:guidance).permit(:style_id, :price, :amount, :surf_point_id).merge(guide_id: current_guide.id)
   end
 
 end
