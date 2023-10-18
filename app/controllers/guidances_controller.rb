@@ -4,7 +4,6 @@ class GuidancesController < ApplicationController
   end
 
   def index
-    @mainsurf_points = SurfPoint.roots.order("id ASC")
     @q = Guidance.ransack(params[:q])
     @guidance = @q.result
   end
