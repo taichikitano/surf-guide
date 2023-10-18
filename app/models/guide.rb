@@ -3,6 +3,7 @@ class Guide < ApplicationRecord
   belongs_to :history
   belongs_to :sex
   belongs_to :style
+  has_one_attached :image
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

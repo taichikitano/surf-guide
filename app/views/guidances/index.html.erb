@@ -1,18 +1,21 @@
 <%= render "shared/visiter_header" %>
 
 <div class='search-guides'>
-  <%= form_tag guidances_path, method: :get do %>
+  <%= search_form_for @q, url: guidances_path do |f| %>
     <div id="select-wrap">
-      <%= select_tag :surf_point_id, options_from_collection_for_select(@mainsurf_points, "id", "name", params[:surf_point_id]), include_blank: "---", id: "parent-category" %>
+      <%= f.label :surf_point_id_eq, 'サーフポイント' %>
+      <br>
+      <%= f.collection_select(:surf_point_id_eq, SurfPoint.all.order("id ASC").limit(3), :id, :name, {include_blank: "---"},{id: "parent-category" }) %>
     </div>
-    <%= submit_tag '検索' %>
+    <%= f.submit '検索' %>
   <% end %>
 </div>
 
 <div class='search-result'>
-  <% @guidances.each do |guidance| %>
+  <% @guidance.each do |guidance| %>
       <div class="posted-guide">
         <%= guidance.guide.name %><br>
+        <%= image_tag guidance.guide.image if guidance.guide.image.attached? %><br>
         <%= link_to '詳細', 'hoge'%>
       </div>
   <% end %>

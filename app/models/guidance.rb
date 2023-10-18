@@ -6,7 +6,7 @@ class Guidance < ApplicationRecord
   belongs_to :style
 
   def self.ransackable_attributes(auth_object = nil)
-    ["surf_point_id", "child_surf_point_id", "grandchild_surf_point_id"]
+    ["surf_point_id"]
   end
 
 end
