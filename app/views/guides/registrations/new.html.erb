@@ -55,6 +55,11 @@
     <%= f.label :home_point, "ホームポイント" %><br />
     <%= f.text_field :home_point %>
   </div>
+  
+  <div class="field">
+    <%= f.label :image ,"プロフィール画像の登録"%><br />
+    <%= f.file_field :image %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
